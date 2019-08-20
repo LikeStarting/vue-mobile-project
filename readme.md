@@ -1,4 +1,4 @@
-Vue Demo
+Vue-m-project
 ===
 
 > This is a mobile project, with vue.js

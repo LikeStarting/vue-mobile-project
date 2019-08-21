@@ -68,6 +68,7 @@
 	}
 	.mint-header {
 		background-color: skyblue;
+		z-index: 999;
 		.back {
 			.mint-button {
 				height: 40px;

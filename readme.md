@@ -13,4 +13,4 @@ npm install
 npm run dev
 
 # bundle all assets
-npm start
+npm run build

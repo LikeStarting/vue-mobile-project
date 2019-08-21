@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --config webpack.config.js",
-    "dev": "webpack-dev-server"
+    "build": "webpack --config webpack.prod.conf.js",
+    "dev": "webpack-dev-server --config webpack.dev.conf.js"
   },
   "keywords": [],
   "author": "simple_xu",
@@ -19,14 +19,17 @@
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sass-loader": "^7.2.0",
     "style-loader": "^1.0.0",
+    "terser-webpack-plugin": "^1.4.1",
     "url-loader": "^2.1.0",
     "vue-loader": "^15.7.1",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "mint-ui": "^2.2.13",

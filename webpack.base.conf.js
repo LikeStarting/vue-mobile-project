@@ -1,19 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
         path: path.join(__dirname, 'build')
-    },
-    mode: 'development',
-    devServer: {
-        port: 3000,
-        contentBase: path.join(__dirname, 'build'),
-        progress: false
     },
     resolve: {
         alias: {
@@ -34,33 +27,6 @@ module.exports = {
                     }
                 ],
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules/
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    {
-                        // loader: 'style-loader'
-                        loader: MiniCssExtractPlugin.loader
-                    },
-                    {
-                        loader: 'css-loader'
-                    }
-                ]
-            },
-            {
-                test: /\.(scss|sass)$/,
-                use: [
-                    {
-                        loader: 'style-loader'
-                    },
-                    {
-                        loader: 'css-loader'
-                    },
-                    {
-                        loader: 'sass-loader'
-                    }
-                ],
                 exclude: /node_modules/
             },
             {
@@ -93,9 +59,6 @@ module.exports = {
             filename: 'index.html',
             minify: {},
             hash: true
-        }),
-        new MiniCssExtractPlugin({
-            filename: '[name].css'
         }),
         new VueLoaderPlugin()
     ]

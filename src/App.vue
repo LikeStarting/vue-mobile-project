@@ -66,7 +66,7 @@
 		padding-bottom: 50px;
 		overflow-x: hidden;
 	}
-	.mint-header {
+	.mint-header.is-fixed {
 		background-color: skyblue;
 		z-index: 999;
 		.back {
